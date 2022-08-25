@@ -1,6 +1,6 @@
 {
   "name": "react-algeria-map",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A react component that displays an interactive map of Algeria including all 58 wilayas.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
