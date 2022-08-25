@@ -1,18 +1,18 @@
 import React from "react";
 import "./Map.css";
 
-export const Map = ({ data ,onWilayaClick}) => {
+export const Map = ({ height, width, data, onWilayaClick }) => {
   return (
     <svg
       id="svg2"
       x="0px"
       y="0px"
-      width="100%"
-      height="500px"
+      width={width ?? "100%"}
+      height={height ?? "500px"}
       viewBox="-248.385 -239.386 982.451 955.452"
       enableBackground="new -248.385 -239.386 982.451 955.452"
     >
-      <g onClick={() => onWilayaClick("Adrar",data["Adrar"])}>
+      <g onClick={() => onWilayaClick("Adrar", data["Adrar"])}>
         <title>{data["Adrar"] ?? ""}</title>
         <polygon
           className="state"
@@ -32,7 +32,7 @@ export const Map = ({ data ,onWilayaClick}) => {
 			 229.442,216.934 242.8,215.614 248.779,218.874 "
         />
       </g>
-      <g>
+      <g onClick={() => onWilayaClick("Chlef", data["Chlef"])}>
         <title>{data["Chlef"] ?? ""}</title>
         <path
           className="state"
@@ -49,7 +49,7 @@ export const Map = ({ data ,onWilayaClick}) => {
 		l0.072-1.73l2.438-2.328l2.072,3.752L238.734-160.41L238.734-160.41z"
         />
       </g>
-      <g>
+      <g onClick={() => onWilayaClick("Laghouat", data["Laghouat"])}>
         <title>{data["Laghouat"] ?? ""}</title>
         <polygon
           className="state"
@@ -70,10 +70,10 @@ export const Map = ({ data ,onWilayaClick}) => {
 	322.059,-42.826 324.879,-38.166 341.139,-32.046 344.121,-29.926 352.139,-22.086 "
         />
       </g>
-      <g>
-        <title>
-          {data["Oum El Bouaghi"] ?? ""}
-        </title>
+      <g
+        onClick={() => onWilayaClick("Oum El Bouaghi", data["Oum El Bouaghi"])}
+      >
+        <title>{data["Oum El Bouaghi"] ?? ""}</title>
         <path
           className="state"
           id="_x30_4_Oum_El-Bouaghi"
@@ -92,7 +92,7 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l-0.708-3.074L490.908-165.62L490.908-165.62z"
         />
       </g>
-      <g>
+      <g onClick={() => onWilayaClick("Batna", data["Batna"])}>
         <title>{data["Batna"] ?? ""}</title>
         <path
           className="state"
@@ -115,7 +115,7 @@ export const Map = ({ data ,onWilayaClick}) => {
 	L445.635-105.596L445.635-105.596z"
         />
       </g>
-      <g>
+      <g onClick={() => onWilayaClick("Béjaïa", data["Béjaïa"])}>
         <title>{data["Béjaïa"] ?? ""}</title>
         <path
           className="state"
@@ -132,7 +132,7 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l1.07-1.388l-4.318-2.93l-0.076,0.896l-1.858-0.176l-0.892,2.756l-7.242-0.96l-0.096,2.698L364.848-188.482L364.848-188.482z"
         />
       </g>
-      <g>
+      <g onClick={() => onWilayaClick("Biskra", data["Biskra"])}>
         <title>{data["Biskra"] ?? ""}</title>
         <path
           className="state"
@@ -150,7 +150,7 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l-0.8,0.96l2.1,2.1l-0.84,2l1.64-0.4l-1.44,4.78L452.54-93.946z"
         />
       </g>
-      <g>
+      <g onClick={() => onWilayaClick("Béchar", data["Béchar"])}>
         <title>{data["Béchar"] ?? ""}</title>
         <polygon
           className="state"
@@ -175,7 +175,7 @@ export const Map = ({ data ,onWilayaClick}) => {
 	148.361,56.214 145.88,58.635 148.38,62.654 146.361,65.054 146.42,68.794 148.119,72.434 153.962,77.135 152.322,83.094 "
         />
       </g>
-      <g>
+      <g onClick={() => onWilayaClick("Blida", data["Blida"])}>
         <title>{data["Blida"] ?? ""}</title>
         <path
           className="state"
@@ -191,7 +191,7 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l0.946,1.912l1.466-1.192l1.386,1.396l2.318-2.308l0.166-2.762l3.26,0.538L304.962-191.188L304.962-191.188z"
         />
       </g>
-      <g>
+      <g onClick={() => onWilayaClick("Bouira", data["Bouira"])}>
         <title>{data["Bouira"] ?? ""}</title>
         <path
           className="state"
@@ -209,10 +209,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l-0.888-2.77L337.561-167.726L337.561-167.726z"
         />
       </g>
-      <g>
-        <title>
-          {data["Tamanrasset"] ?? ""}
-        </title>
+      <g onClick={() => onWilayaClick("Tamanrasset", data["Tamanrasset"])}>
+        <title>{data["Tamanrasset"] ?? ""}</title>
         <path
           className="state"
           id="_x31_1_Tamenrasset"
@@ -234,8 +232,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l4.42-0.1l14.96,8.46L644.7,510.755z"
         />
       </g>
-      <g>
-        <title>12 Tébessa ==&gt; {data["Tébessa"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Tébessa", data["Tébessa"])}>
+        <title>{data["Tébessa"] ?? ""}</title>
         <polygon
           className="state"
           id="_x31_2_Tébessa"
@@ -255,8 +253,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	521.6,-133.786 524.66,-133.646 519.96,-126.086 "
         />
       </g>
-      <g>
-        <title>13 Tlemcen ==&gt; {data["Tlemcen"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Tlemcen", data["Tlemcen"])}>
+        <title>{data["Tlemcen"] ?? ""}</title>
         <path
           className="state"
           id="_x31_3_Tlemcen"
@@ -273,8 +271,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l-2.382-0.092l-1.012-3.654l2.626-4.254L123.968-119.174L123.968-119.174z"
         />
       </g>
-      <g>
-        <title>14 Tiaret ==&gt; {data["Tiaret"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Tiaret", data["Tiaret"])}>
+        <title>{data["Tiaret"] ?? ""}</title>
         <path
           className="state"
           id="_x31_4_Tiaret"
@@ -294,10 +292,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l3.1,0.134L254.35-141.09L254.35-141.09z"
         />
       </g>
-      <g>
-        <title>
-          15 Tizi Ouzou ==&gt; {data["Tizi Ouzou"] || 0} utilisateurs
-        </title>
+      <g onClick={() => onWilayaClick("Tizi Ouzou", data["Tizi Ouzou"])}>
+        <title>{data["Tizi Ouzou"] ?? ""}</title>
         <path
           className="state"
           id="_x31_5_Tizi-Ouzou"
@@ -312,8 +308,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l0.09-1.56l2.708-2.326l-0.27-2.478l10.878-0.642l3.702,0.852l1.972-1.094L358.202-211.78L358.202-211.78z"
         />
       </g>
-      <g>
-        <title>16 Alger ==&gt; {data["Alger"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Alger", data["Alger"])}>
+        <title>{data["Alger"] ?? ""}</title>
         <path
           className="state"
           id="_x31_6_Alger"
@@ -327,8 +323,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l2.324,1.05l4.238-1.244l0.314-2.59L307.54-205.556L307.54-205.556z"
         />
       </g>
-      <g>
-        <title>17 Djelfa ==&gt; {data["Djelfa"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Djelfa", data["Djelfa"])}>
+        <title>{data["Djelfa"] ?? ""}</title>
         <polygon
           className="state"
           id="_x31_7_Djelfa"
@@ -354,8 +350,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	382.462,-41.846 "
         />
       </g>
-      <g>
-        <title>18 Jijel ==&gt; {data["Jijel"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Jijel", data["Jijel"])}>
+        <title>{data["Jijel"] ?? ""}</title>
         <path
           className="state"
           id="_x31_8_Jijel"
@@ -370,8 +366,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	L406.661-196.316L406.661-196.316z"
         />
       </g>
-      <g>
-        <title>19 Sétif ==&gt; {data["Sétif"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Sétif", data["Sétif"])}>
+        <title>{data["Sétif"] ?? ""}</title>
         <path
           className="state"
           id="_x31_9_Sétif"
@@ -390,8 +386,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l1.502-0.048l0.806,3.708l1.958,0.154l1.984-1.916l2.498,1.352L406.661-196.316L406.661-196.316z"
         />
       </g>
-      <g>
-        <title>20 Saïda ==&gt; {data["Saïda"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Saïda", data["Saïda"])}>
+        <title>{data["Saïda"] ?? ""}</title>
         <path
           className="state"
           id="_x32_0_Saida"
@@ -408,8 +404,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l0.632,1.062l5.948,2.448L202.492-83.178L202.492-83.178z"
         />
       </g>
-      <g>
-        <title>21 Skikda ==&gt; {data["Skikda"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Skikda", data["Skikda"])}>
+        <title>{data["Skikda"] ?? ""}</title>
         <path
           className="state"
           id="_x32_1_Skikda"
@@ -426,10 +422,10 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l2.69,2.506l1.294,6.848l-0.152,1.792l-2.392,0.982L473.455-204.288L473.455-204.288z"
         />
       </g>
-      <g>
-        <title>
-          22 Sidi Bel Abbès ==&gt; {data["Sidi Bel Abbès"] || 0} utilisateurs
-        </title>
+      <g
+        onClick={() => onWilayaClick("Sidi Bel Abbès", data["Sidi Bel Abbès"])}
+      >
+        <title>{data["Sidi Bel Abbès"] ?? ""}</title>
         <path
           className="state"
           id="_x32_2_Sidi_Bel_Abbes"
@@ -449,8 +445,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	L144.74-136.602L144.74-136.602z"
         />
       </g>
-      <g>
-        <title>23 Annaba ==&gt; {data["Annaba"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Annaba", data["Annaba"])}>
+        <title>{data["Annaba"] ?? ""}</title>
         <path
           className="state"
           id="_x32_3_Annaba"
@@ -465,8 +461,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l0.35,2.374l5.426,1.006L486.755-204.574L486.755-204.574z"
         />
       </g>
-      <g>
-        <title>24 Guelma ==&gt; {data["Guelma"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Guelma", data["Guelma"])}>
+        <title>{data["Guelma"] ?? ""}</title>
         <path
           className="state"
           id="_x32_4_Guelma"
@@ -483,10 +479,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	L486.755-204.574L486.755-204.574z"
         />
       </g>
-      <g>
-        <title>
-          25 Constantine ==&gt; {data["Constantine"] || 0} utilisateurs
-        </title>
+      <g onClick={() => onWilayaClick("Constantine", data["Constantine"])}>
+        <title>{data["Constantine"] ?? ""}</title>
         <path
           className="state"
           id="_x32_5_Constantine"
@@ -502,8 +496,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	L460.215-176.918z"
         />
       </g>
-      <g>
-        <title>26 Médéa ==&gt; {data["Médéa"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Médéa", data["Médéa"])}>
+        <title>{data["Médéa"] ?? ""}</title>
         <path
           className="state"
           id="_x32_6_Médéa"
@@ -523,10 +517,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	L318.817-160.868z"
         />
       </g>
-      <g>
-        <title>
-          27 Mostaganem ==&gt; {data["Mostaganem"] || 0} utilisateurs
-        </title>
+      <g onClick={() => onWilayaClick("Mostaganem", data["Mostaganem"])}>
+        <title>{data["Mostaganem"] ?? ""}</title>
         <path
           className="state"
           id="_x32_7_Mostaganem"
@@ -541,8 +533,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	L162.14-154.198z"
         />
       </g>
-      <g>
-        <title>28 M'Sila ==&gt; {data["M'Sila"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("M'Sila", data["M'Sila"])}>
+        <title>{data["M'Sila"] ?? ""}</title>
         <path
           className="state"
           id="_x32_8_M_x27_sila"
@@ -562,8 +554,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l2.34-0.1l0.36,2.44l2.82-1.02l-0.34,1.24l2.94,2.1l2.22-0.48l0.98,1.02l-0.84,1.08l1.1,1.62L391.46-148.006z"
         />
       </g>
-      <g>
-        <title>29 Mascara ==&gt; {data["Mascara"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Mascara", data["Mascara"])}>
+        <title>{data["Mascara"] ?? ""}</title>
         <path
           className="state"
           id="_x32_9_Mascara"
@@ -581,8 +573,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l2.058,2.854l2.14-0.36l0.06,1.526l1.212-1.926L176.464-149.777L176.464-149.777z"
         />
       </g>
-      <g>
-        <title>30 Ouargla ==&gt; {data["Ouargla"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Ouargla", data["Ouargla"])}>
+        <title>{data["Ouargla"] ?? ""}</title>
         <path
           className="state"
           id="_x33_0_Ouargla"
@@ -597,8 +589,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l5.52,2.22l5.06,2.26l3.3,1.62l6.78,0.8l79.46-8.52L582,103.394z"
         />
       </g>
-      <g>
-        <title>31 Oran ==&gt; {data["Oran"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Oran", data["Oran"])}>
+        <title>{data["Oran"] ?? ""}</title>
         <path
           className="state"
           id="_x33_1_Oran"
@@ -614,8 +606,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l0.364,1.344l3.006-1.494l-0.48-1.928L144.74-136.602L144.74-136.602z"
         />
       </g>
-      <g>
-        <title>32 El Bayadh ==&gt; {data["El Bayadh"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("El Bayadh", data["El Bayadh"])}>
+        <title>{data["El Bayadh"] ?? ""}</title>
         <polygon
           className="state"
           id="_x33_2_El_Bayadh"
@@ -637,8 +629,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	256.299,-16.605 256.001,-13.545 262.221,-0.406 263.361,11.955 264.919,18.234 264.941,18.255 267.201,27.315 "
         />
       </g>
-      <g>
-        <title>33 Illizi ==&gt; {data["Illizi"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Illizi", data["Illizi"])}>
+        <title>{data["Illizi"] ?? ""}</title>
         <polygon
           className="state"
           id="_x33_3_Illizi"
@@ -658,11 +650,12 @@ export const Map = ({ data ,onWilayaClick}) => {
 	624.859,366.534 "
         />
       </g>
-      <g>
-        <title>
-          34 Bordj Bou Arreridj ==&gt; {data["Bordj Bou Arreridj"] || 0}{" "}
-          utilisateurs
-        </title>
+      <g
+        onClick={() =>
+          onWilayaClick("Bordj Bou Arreridj", data["Bordj Bou Arreridj"])
+        }
+      >
+        <title>{data["Bordj Bou Arreridj"] ?? ""}</title>
         <path
           className="state"
           id="_x33_4_Bord-Bou-Arréridj"
@@ -678,8 +671,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l5.44-1.064l2.658,3.338l2.334-0.098l0.364,2.434L378.418-155.512L378.418-155.512z"
         />
       </g>
-      <g>
-        <title>35 Boumerdès ==&gt; {data["Boumerdès"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Boumerdès", data["Boumerdès"])}>
+        <title>{data["Boumerdès"] ?? ""}</title>
         <path
           className="state"
           id="_x33_5_Boumerdès"
@@ -694,8 +687,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l1.772-0.698l-1.072,0.958l0.94,1.714l-0.768,0.828L305.453-193.743L305.453-193.743z"
         />
       </g>
-      <g>
-        <title>36 El Tarf ==&gt; {data["El Tarf"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("El Tarf", data["El Tarf"])}>
+        <title>{data["El Tarf"] || 0}</title>
         <path
           className="state"
           id="_x33_6_El-Taref"
@@ -710,8 +703,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l-2.372-0.674l0.398-4.452l-8.904,2.882l-2.858-1.31l-3.644,0.546l-1.964-1.722l-9.47,5.352L492.47-214.997L492.47-214.997z"
         />
       </g>
-      <g>
-        <title>37 Tindouf ==&gt; {data["Tindouf"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Tindouf", data["Tindouf"])}>
+        <title>{data["Tindouf"] ?? ""}</title>
         <polygon
           className="state"
           id="_x33_7_Tindouf"
@@ -728,10 +721,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	-32.701,213.774 -19.138,239.135 -18.981,254.415 -7.298,268.615 -1.298,273.455 "
         />
       </g>
-      <g>
-        <title>
-          38 Tissemsilt ==&gt; {data["Tissemsilt"] || 0} utilisateurs
-        </title>
+      <g onClick={() => onWilayaClick("Tissemsilt", data["Tissemsilt"])}>
+        <title>{data["Tissemsilt"] ?? ""}</title>
         <path
           className="state"
           id="_x33_8_Tissemsilt"
@@ -747,8 +738,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l-3.82-2.34l-2.072-3.752l-2.438,2.328l-0.072,1.73l-4.524,1.24l0.768,0.696l-1.036,0.666L225.421-157.014L225.421-157.014z"
         />
       </g>
-      <g>
-        <title>39 El Oued ==&gt; {data["El Oued"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("El Oued", data["El Oued"])}>
+        <title>{data["El Oued"] ?? ""}</title>
         <polygon
           className="state"
           id="_x33_9_El_Oued"
@@ -765,8 +756,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	498.72,-39.006 502.699,-26.825 505.879,-26.806 515.22,-22.946 515.32,-20.386 524.84,-9.266 527.22,7.054 "
         />
       </g>
-      <g>
-        <title>40 Khenchela ==&gt; {data["Khenchela"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Khenchela", data["Khenchela"])}>
+        <title>{data["Khenchela"] ?? ""}</title>
         <polygon
           className="state"
           id="_x34_0_Khenchela"
@@ -788,10 +779,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	478.02,-122.526 475.419,-120.906 472.639,-113.686 "
         />
       </g>
-      <g>
-        <title>
-          41 Souk Ahras ==&gt; {data["Souk Ahras"] || 0} utilisateurs
-        </title>
+      <g onClick={() => onWilayaClick("Souk Ahras", data["Souk Ahras"])}>
+        <title>{data["Souk Ahras"] ?? ""}</title>
         <path
           className="state"
           id="_x34_1_Souk_Ahras"
@@ -807,8 +796,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l1.666,3.652l-1.736,3.102L514.766-170.062L514.766-170.062z"
         />
       </g>
-      <g>
-        <title>42 Tipaza ==&gt; {data["Tipaza"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Tipaza", data["Tipaza"])}>
+        <title>{data["Tipaza"] ?? ""}</title>
         <path
           className="state"
           id="_x34_2_Tipaza"
@@ -822,8 +811,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l-2.352-0.56l-13.48,4.064l-4.622-0.548L238.204-193.226L238.204-193.226z"
         />
       </g>
-      <g>
-        <title>43 Mila ==&gt; {data["Mila"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Mila", data["Mila"])}>
+        <title>{data["Mila"] ?? ""}</title>
         <path
           className="state"
           id="_x34_3_Mila"
@@ -839,8 +828,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l0.426,1.542l-1.43-1.02l-3.3,0.452L425.59-162.223L425.59-162.223z"
         />
       </g>
-      <g>
-        <title>44 Aïn Defla ==&gt; {data["Aïn Defla"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Aïn Defla", data["Aïn Defla"])}>
+        <title>{data["Aïn Defla"] ?? ""}</title>
         <path
           className="state"
           id="_x34_4_Aïn_Defla"
@@ -856,8 +845,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	L271.403-177l1.25-3.82l2.692,0.086L276.861-181.958L276.861-181.958z"
         />
       </g>
-      <g>
-        <title>45 Naâma ==&gt; {data["Naâma"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Naâma", data["Naâma"])}>
+        <title>{data["Naâma"] ?? ""}</title>
         <polygon
           className="state"
           id="_x34_5_Naâma"
@@ -877,10 +866,10 @@ export const Map = ({ data ,onWilayaClick}) => {
 	"
         />
       </g>
-      <g>
-        <title>
-          46 Aïn Témouchent ==&gt; {data["Aïn Témouchent"] || 0} utilisateurs
-        </title>
+      <g
+        onClick={() => onWilayaClick("Aïn Témouchent", data["Aïn Témouchent"])}
+      >
+        <title>{data["Aïn Témouchent"] ?? ""}</title>
         <path
           className="state"
           id="_x34_6_Aïn_Témouchent"
@@ -896,8 +885,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l-1.346-0.358l0.572,3.892l-2.76,0.922l-0.496,2.902L123.968-119.174L123.968-119.174z"
         />
       </g>
-      <g>
-        <title>47 Ghardaïa ==&gt; {data["Ghardaïa"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Ghardaïa", data["Ghardaïa"])}>
+        <title>{data["Ghardaïa"] || 0}</title>
         <polygon
           className="state"
           id="_x34_7_Ghardaïa_1_"
@@ -913,8 +902,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	330.822,-12.306 332.361,-13.146 358.52,-11.346 "
         />
       </g>
-      <g>
-        <title>48 Relizane ==&gt; {data["Relizane"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Relizane", data["Relizane"])}>
+        <title>{data["Relizane"] ?? ""}</title>
         <path
           className="state"
           id="_x34_8_Relizane"
@@ -931,10 +920,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l-4.116-0.414l-0.328,1.826l-1.622-0.22l-0.224,1.736l-2.428,0.194l-3.454,5.756L201.76-136.182L201.76-136.182z"
         />
       </g>
-      <g>
-        <title>
-          57 El Meghaier ==&gt; {data["El Meghaier"] || 0} utilisateurs
-        </title>
+      <g onClick={() => onWilayaClick("El Meghaier", data["El Meghaier"])}>
+        <title>{data["El Meghaier"] || 0}</title>
         <polygon
           className="state"
           id="_x34_9_El_M_x27_Ghair"
@@ -949,8 +936,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	423.4,-56.186 425.679,-50.986 425.759,-45.886 423.84,-43.745 426.199,-40.806 "
         />
       </g>
-      <g>
-        <title>58 El Menia ==&gt; {data["El Menia"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("El Menia", data["El Menia"])}>
+        <title>{data["El Menia"] ?? ""}</title>
         <polygon
           className="state"
           id="_x35_0_El_Meniaa"
@@ -965,10 +952,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	317.601,37.934 331.441,37.934 336.601,41.434 342.059,41.434 347.101,45.434 351.441,48.114 "
         />
       </g>
-      <g>
-        <title>
-          51 Ouled Djellal ==&gt; {data["Ouled Djellal"] || 0} utilisateurs
-        </title>
+      <g onClick={() => onWilayaClick("Ouled Djellal", data["Ouled Djellal"])}>
+        <title>{data["Ouled Djellal"] ?? ""}</title>
         <path
           className="state"
           id="_x35_1_Ouled_Djellal"
@@ -985,11 +970,12 @@ export const Map = ({ data ,onWilayaClick}) => {
 	L392.299-41.386z"
         />
       </g>
-      <g>
-        <title>
-          50 Bordj Badji Mokhtar ==&gt; {data["Bordj Badji Mokhtar"] || 0}{" "}
-          utilisateurs
-        </title>
+      <g
+        onClick={() =>
+          onWilayaClick("Bordj Badji Mokhtar", data["Bordj Badji Mokhtar"])
+        }
+      >
+        <title>{data["Bordj Badji Mokhtar"] ?? ""}</title>
         <polygon
           className="state"
           id="_x35_2_Bordj_Baji_Mokhtar"
@@ -1006,10 +992,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	"
         />
       </g>
-      <g>
-        <title>
-          52 Béni Abbès ==&gt; {data["Béni Abbès"] || 0} utilisateurs
-        </title>
+      <g onClick={() => onWilayaClick("Béni Abbès", data["Béni Abbès"])}>
+        <title>{data["Béni Abbès"] ?? ""}</title>
         <polygon
           className="state"
           id="_x35_3_Béni_Abbès"
@@ -1029,8 +1013,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	147.559,99.774 150.559,104.035 167.559,104.035 170.942,105.894 "
         />
       </g>
-      <g>
-        <title>49 Timimoun ==&gt; {data["Timimoun"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Timimoun", data["Timimoun"])}>
+        <title>{data["Timimoun"] ?? ""}</title>
         <polygon
           className="state"
           id="_x35_4_Timimoun"
@@ -1045,8 +1029,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	155.201,140.114 163.14,126.294 180.002,107.355 180.38,106.915 212.02,84.554 254.18,58.195 252.822,115.434 247.54,141.994 "
         />
       </g>
-      <g>
-        <title>55 Touggourt ==&gt; {data["Touggourt"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Touggourt", data["Touggourt"])}>
+        <title>{data["Touggourt"] ?? ""}</title>
         <path
           className="state"
           id="_x35_5_Touggourt"
@@ -1060,8 +1044,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l0.1-2.8l1.32-1.22l1.1,2.1l5.46-4.28l1.52-0.22l1.04,2.08l0.64-1.6l2.42,15.32l16.2,45.94l15.56,23.16L479.759,35.014z"
         />
       </g>
-      <g>
-        <title>56 Djanet ==&gt; {data["Djanet"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("Djanet", data["Djanet"])}>
+        <title>{data["Djanet"] ?? ""}</title>
         <polygon
           className="state"
           id="_x35_6_Djanet"
@@ -1079,8 +1063,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	664.68,404.115 668.1,404.594 670.68,405.635 675.76,410.695 679.78,412.015 693.94,420.755 702.16,416.794 "
         />
       </g>
-      <g>
-        <title>53 In Salah ==&gt; {data["In Salah"] || 0} utilisateurs</title>
+      <g onClick={() => onWilayaClick("In Salah", data["In Salah"])}>
+        <title>{data["In Salah"] ?? ""}</title>
         <path
           className="state"
           id="_x35_7_In_Salah"
@@ -1098,10 +1082,8 @@ export const Map = ({ data ,onWilayaClick}) => {
 	l86.24-66.52l2.6,67.62l-3.54,16.72L423.819,270.155z"
         />
       </g>
-      <g>
-        <title>
-          54 In Guezzam ==&gt; {data["In Guezzam"] || 0} utilisateurs
-        </title>
+      <g onClick={() => onWilayaClick("In Guezzam", data["In Guezzam"])}>
+        <title>{data["In Guezzam"] ?? ""}</title>
         <path
           className="state"
           id="_x35_8_In_Guezzam"

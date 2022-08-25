@@ -1,6 +1,6 @@
 {
   "name": "react-algeria-map",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react component that displays an interactive map of Algeria including all 58 wilayas.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -17,6 +17,14 @@
   ],
   "author": "Akli Yalaoui",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkliYalaoui/react-algeria-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AkliYalaoui/react-algeria-map/issues"
+  },
+  "homepage": "https://github.com/AkliYalaoui/react-algeria-map#readme",
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@babel/preset-react": "^7.18.6",

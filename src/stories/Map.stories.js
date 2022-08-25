@@ -39,7 +39,7 @@ stories.add("App", () => {
     Jijel: 17,
     Khenchela: 39,
     Laghouat: 2,
-    " M'Sila": 27,
+    "M'Sila": 27,
     Mascara: 28,
     Mila: 42,
     Mostaganem: 26,
@@ -66,5 +66,5 @@ stories.add("App", () => {
     Touggourt: 54,
     Tébessa: 11,
   };
-  return <Map data={data} onWilayaClick={(wilaya,data) => console.log(wilaya,data)} />;
+  return <Map height="400px" width="400px" data={data} onWilayaClick={(wilaya,data) => console.log(wilaya,data)} />;
 });
