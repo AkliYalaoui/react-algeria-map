@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Map.css";
 
-export const Map = ({ height, width, data, onWilayaClick }) => {
+export const Map = ({
+  height,
+  width,
+  color,
+  stroke,
+  hoverStroke,
+  HoverColor,
+  data,
+  onWilayaClick,
+}) => {
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--react-algeria-map-hover-fill",
+      HoverColor
+    );
+    document.documentElement.style.setProperty(
+      "--react-algeria-map-hover-stroke",
+      hoverStroke
+    );
+  }, [HoverColor,hoverStroke]);
+
   return (
     <svg
       id="svg2"
@@ -17,8 +37,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x30_1_Adrar"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="251.102,224.174 
@@ -37,8 +57,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x30_2_Chlef"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M238.734-160.41
@@ -54,8 +74,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x30_3_Laghouat"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="358.52,-11.346 
@@ -77,8 +97,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x30_4_Oum_El-Bouaghi"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M490.908-165.62
@@ -97,8 +117,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x30_5_Batna"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M445.635-105.596
@@ -120,8 +140,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x30_6_Béjaïa"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M364.848-188.482
@@ -137,8 +157,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x30_7_Biskra"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M452.54-93.946l-2.1,4.08
@@ -155,8 +175,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x30_8_Béchar"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="180.38,106.915 
@@ -180,8 +200,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x30_9_Blida"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M304.962-191.188
@@ -196,8 +216,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x31_0_Bouira"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M337.561-167.726
@@ -214,8 +234,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x31_1_Tamenrasset"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M644.7,510.755
@@ -237,8 +257,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x31_2_Tébessa"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="
@@ -258,8 +278,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x31_3_Tlemcen"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M123.968-119.174
@@ -276,8 +296,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x31_4_Tiaret"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M254.35-141.09
@@ -297,8 +317,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x31_5_Tizi-Ouzou"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M358.202-211.78
@@ -313,8 +333,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x31_6_Alger"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M307.54-205.556
@@ -328,8 +348,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x31_7_Djelfa"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="382.679,-38.046 
@@ -355,8 +375,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x31_8_Jijel"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M406.661-196.316
@@ -371,8 +391,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x31_9_Sétif"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M406.661-196.316
@@ -391,8 +411,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x32_0_Saida"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M202.492-83.178
@@ -409,8 +429,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x32_1_Skikda"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M473.455-204.288
@@ -429,8 +449,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x32_2_Sidi_Bel_Abbes"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M144.74-136.602
@@ -450,8 +470,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x32_3_Annaba"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M486.755-204.574
@@ -466,8 +486,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x32_4_Guelma"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M486.755-204.574
@@ -484,8 +504,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x32_5_Constantine"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M460.215-176.918
@@ -501,8 +521,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x32_6_Médéa"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M318.817-160.868
@@ -522,8 +542,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x32_7_Mostaganem"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M162.14-154.198
@@ -538,8 +558,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x32_8_M_x27_sila"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M391.46-148.006
@@ -559,8 +579,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x32_9_Mascara"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M176.464-149.777
@@ -578,8 +598,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x33_0_Ouargla"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M582,103.394
@@ -594,8 +614,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x33_1_Oran"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M144.74-136.602l0.638-1.498
@@ -611,8 +631,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x33_2_El_Bayadh"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="
@@ -634,8 +654,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x33_3_Illizi"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="625.66,376.734 
@@ -659,8 +679,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x33_4_Bord-Bou-Arréridj"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="
@@ -676,8 +696,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x33_5_Boumerdès"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M305.453-193.743
@@ -692,8 +712,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x33_6_El-Taref"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M492.47-214.997
@@ -708,8 +728,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x33_7_Tindouf"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="25.18,276.815 
@@ -726,8 +746,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x33_8_Tissemsilt"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M225.421-157.014
@@ -743,8 +763,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x33_9_El_Oued"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="559.22,26.494 
@@ -761,8 +781,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x34_0_Khenchela"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="
@@ -784,8 +804,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x34_1_Souk_Ahras"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M514.766-170.062
@@ -801,8 +821,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x34_2_Tipaza"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M238.204-193.226
@@ -816,8 +836,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x34_3_Mila"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M425.59-162.223
@@ -833,8 +853,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x34_4_Aïn_Defla"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M276.861-181.958
@@ -850,8 +870,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x34_5_Naâma"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="170.26,-44.006 
@@ -873,8 +893,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x34_6_Aïn_Témouchent"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="
@@ -890,8 +910,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x34_7_Ghardaïa_1_"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="
@@ -907,8 +927,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x34_8_Relizane"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M201.76-136.182
@@ -925,8 +945,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x34_9_El_M_x27_Ghair"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="
@@ -941,8 +961,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x35_0_El_Meniaa"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="
@@ -957,8 +977,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x35_1_Ouled_Djellal"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M392.299-41.386
@@ -979,8 +999,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x35_2_Bordj_Baji_Mokhtar"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="
@@ -997,8 +1017,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x35_3_Béni_Abbès"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="
@@ -1018,8 +1038,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x35_4_Timimoun"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="
@@ -1034,8 +1054,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x35_5_Touggourt"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M479.759,35.014
@@ -1049,8 +1069,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <polygon
           className="state"
           id="_x35_6_Djanet"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           points="723.26,452.534 
@@ -1068,8 +1088,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x35_7_In_Salah"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M423.819,270.155
@@ -1087,8 +1107,8 @@ export const Map = ({ height, width, data, onWilayaClick }) => {
         <path
           className="state"
           id="_x35_8_In_Guezzam"
-          fill="#86AAE0"
-          stroke="#FFFFFF"
+          fill={color}
+          stroke={stroke}
           strokeWidth="0.75"
           strokeLinecap="round"
           d="M529.58,594.575

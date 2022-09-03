@@ -2,6 +2,7 @@
 
 A react component that displays an interactive map of Algeria including all 58 wilayas.<br/>
 [Run On stackblitz](https://stackblitz.com/edit/react-ts-8vv5gq?file=App.tsx)
+
 ## Installation
 
 Install this component from NPM:
@@ -9,21 +10,36 @@ Install this component from NPM:
 ```bash
 npm install --save react-algeria-map
 ```
+
 ## Usage
 
 Then, import and use it:
 
 ```jsx
-import { Map } from 'react-algeria-map';
+import { Map } from "react-algeria-map";
 
 <Map
-    height="400px"
-    width="400px"
-    data={data}
-    onWilayaClick={(wilaya, value) => console.log(wilaya, value)}
-/>
+  color="#55E6C1"
+  HoverColor="#58B19F"
+  stroke="#fff"
+  hoverStroke="#218c74"
+  height="400px"
+  width="400px"
+  data={data}
+  onWilayaClick={(wilaya, data) => console.log(wilaya, data)}
+/>;
 ```
-
+## Props
+| Prop          | Type                                                     | Description                                                                                                                                                              |
+|---------------|----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| color         | string                                                   | Set the color of the wilayas in the map                                                                                                                                  |
+| HoverColor    | string                                                   | Set the color of the hovered wilaya                                                                                                                                      |
+| stroke        | string                                                   | Set the color of the borders of the wilayas                                                                                                                              |
+| hoverStroke   | string                                                   | Set the color of the borders of the hovered wilaya                                                                                                                       |
+| height        | string                                                   | Set the occupied height by the map                                                                                                                                       |
+| width         | string                                                   | Set the occupied width by the map                                                                                                                                        |
+| data          | object                                                   | Sets the data to show in hover or click actions on each wilaya. <br>The keys are fixed and are the wilayas, the values of the keys <br>can be anything you want to show. |
+| onWilayaClick | function(key:string,value: string\|number\|boolean):void | The callback function to execute when the wilaya is being clicked                                                                                                        |
 ## data prop
 
 The data prop is just an object where each key is the name of the wilaya and its value is what's displayed when the wilaya being hovered or clicked. So keys are fixed and you are free to set the values for whatever you want.
@@ -33,32 +49,32 @@ const data = {
   Adrar: 0,
   Alger: 15,
   Annaba: 22,
-  'Aïn Defla': 43,
-  'Aïn Témouchent': 45,
+  "Aïn Defla": 43,
+  "Aïn Témouchent": 45,
   Batna: 4,
   Biskra: 6,
   Blida: 8,
-  'Bordj Badji Mokhtar': 49,
-  'Bordj Bou Arreridj': 33,
+  "Bordj Badji Mokhtar": 49,
+  "Bordj Bou Arreridj": 33,
   Bouira: 9,
   Boumerdès: 34,
   Béchar: 7,
   Béjaïa: 5,
-  'Béni Abbès': 51,
+  "Béni Abbès": 51,
   Chlef: 1,
   Constantine: 24,
   Djanet: 55,
   Djelfa: 16,
-  'El Bayadh': 31,
-  'El Meghaier': 56,
-  'El Menia': 57,
-  'El Oued': 38,
-  'El Tarf': 35,
+  "El Bayadh": 31,
+  "El Meghaier": 56,
+  "El Menia": 57,
+  "El Oued": 38,
+  "El Tarf": 35,
   Ghardaïa: 46,
   Guelma: 23,
   Illizi: 32,
-  'In Guezzam': 53,
-  'In Salah': 52,
+  "In Guezzam": 53,
+  "In Salah": 52,
   Jijel: 17,
   Khenchela: 39,
   Laghouat: 2,
@@ -70,13 +86,13 @@ const data = {
   Naâma: 44,
   Oran: 30,
   Ouargla: 29,
-  'Ouled Djellal': 50,
-  'Oum El Bouaghi': 3,
+  "Ouled Djellal": 50,
+  "Oum El Bouaghi": 3,
   Relizane: 47,
   Saïda: 19,
-  'Sidi Bel Abbès': 21,
+  "Sidi Bel Abbès": 21,
   Skikda: 20,
-  'Souk Ahras': 40,
+  "Souk Ahras": 40,
   Sétif: 18,
   Tamanrasset: 10,
   Tiaret: 13,
@@ -84,10 +100,9 @@ const data = {
   Tindouf: 36,
   Tipaza: 41,
   Tissemsilt: 37,
-  'Tizi Ouzou': 14,
+  "Tizi Ouzou": 14,
   Tlemcen: 12,
   Touggourt: 54,
   Tébessa: 11,
 };
-
 ```

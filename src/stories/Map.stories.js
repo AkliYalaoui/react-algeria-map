@@ -66,5 +66,16 @@ stories.add("App", () => {
     Touggourt: 54,
     Tébessa: 11,
   };
-  return <Map height="400px" width="400px" data={data} onWilayaClick={(wilaya,data) => console.log(wilaya,data)} />;
+  return (
+    <Map
+      color="#55E6C1"
+      HoverColor="#58B19F"
+      stroke="#fff"
+      hoverStroke="#218c74"
+      height="400px"
+      width="400px"
+      data={data}
+      onWilayaClick={(wilaya, data) => console.log(wilaya, data)}
+    />
+  );
 });
