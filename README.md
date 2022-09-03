@@ -1,11 +1,11 @@
 ﻿# react-algeria-map
 
-A react component that displays an interactive map of Algeria including all 58 wilayas.<br/>
-[Run On stackblitz](https://stackblitz.com/edit/react-ts-8vv5gq?file=App.tsx)
+A react component that displays an interactive map of Algeria including all 58 wilayas.\
+[Check a demo of the component On stackblitz](https://stackblitz.com/edit/react-ts-8vv5gq?file=App.tsx)
 
 ## Installation
 
-Install this component from NPM:
+This component is available via npm, simply run the following command :
 
 ```bash
 npm install --save react-algeria-map
@@ -13,7 +13,7 @@ npm install --save react-algeria-map
 
 ## Usage
 
-Then, import and use it:
+The component is very easy to use, first import it then call it as a regular react component :
 
 ```jsx
 import { Map } from "react-algeria-map";
